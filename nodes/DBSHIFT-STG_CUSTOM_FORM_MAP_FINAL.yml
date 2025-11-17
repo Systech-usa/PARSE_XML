@@ -1,0 +1,242 @@
+fileVersion: 1
+id: 5e0675e1-2d3e-433c-8de9-7429818461a5
+name: STG_CUSTOM_FORM_MAP_FINAL
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: DBSHIFT
+  deployEnabled: true
+  description: Final stage node extracting individual form field attributes from XML data
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cfb4c666-8b0a-48c5-bf2f-5f81f9d79333
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UNIQCUSTOMFORMMAP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cfb4c666-8b0a-48c5-bf2f-5f81f9d79333
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: SL."UNIQCUSTOMFORMMAP"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 94cf7aa3-8e50-4c31-9b1c-540a64f9e86f
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: FORM_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 94cf7aa3-8e50-4c31-9b1c-540a64f9e86f
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: SL."FORM_NAME"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e37a2d4b-70c3-4a6b-8380-7c1527cda0ab
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PAGE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e37a2d4b-70c3-4a6b-8380-7c1527cda0ab
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: SL."PAGE_ID"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60d3d533-a90f-4f0c-97ac-16dad02a2431
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PAGE_DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 60d3d533-a90f-4f0c-97ac-16dad02a2431
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: SL."PAGE_DESCRIPTION"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6720cdf0-e925-453c-bcaf-0014c98b1357
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: FIELD_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6720cdf0-e925-453c-bcaf-0014c98b1357
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: XMLGET(PARSE_XML(SL."XML_DATA"), '/Control/@Id')::VARCHAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d05e67a-d859-4739-aaec-9595d3915f78
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: FIELD_TEXT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3d05e67a-d859-4739-aaec-9595d3915f78
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: XMLGET(PARSE_XML(SL."XML_DATA"), '/Control/@Text')::VARCHAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1cf38b48-dcf3-42ff-aae0-ef1f70f9de68
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: FIELD_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1cf38b48-dcf3-42ff-aae0-ef1f70f9de68
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: XMLGET(PARSE_XML(SL."XML_DATA"), '/Control/@FldName')::VARCHAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5aeedf65-3f83-461a-8a87-2bc6e25708ba
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DATA_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5aeedf65-3f83-461a-8a87-2bc6e25708ba
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: XMLGET(PARSE_XML(SL."XML_DATA"), '/Control/@DataTypeCd')::VARCHAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b298be9f-a340-49ab-8cfd-0d89d7a2b996
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DATA_LENGTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b298be9f-a340-49ab-8cfd-0d89d7a2b996
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: XMLGET(PARSE_XML(SL."XML_DATA"), '/Control/@MaxLenN')::VARCHAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4871d544-acf0-42af-a101-5d1a891c9fda
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ORDER_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4871d544-acf0-42af-a101-5d1a891c9fda
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: XMLGET(PARSE_XML(SL."XML_DATA"), '/Control/@OrderN')::VARCHAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6ccc658e-2320-426c-b83f-8f97c58678b2
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: DW_DATE_CREATED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6ccc658e-2320-426c-b83f-8f97c58678b2
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: CURRENT_TIMESTAMP()
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5330f787-12e2-4bb5-98ac-5059caca0e0f
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DW_CREATE_USER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5330f787-12e2-4bb5-98ac-5059caca0e0f
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: "'SYSTEM'"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f13c27eb-3c87-45f0-a863-1212f90f254a
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: DW_DATE_UPDATED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f13c27eb-3c87-45f0-a863-1212f90f254a
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: CURRENT_TIMESTAMP()
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b19c13f-04c9-4181-a7d0-6f81b360dbef
+          stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DW_UPDATE_USER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1b19c13f-04c9-4181-a7d0-6f81b360dbef
+                stepCounter: 5e0675e1-2d3e-433c-8de9-7429818461a5
+            transform: "'SYSTEM'"
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          SL: 5bec560d-dc4f-4a31-8892-b8903b17e6ba
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: STG_CUSTOM_FORM_PROCESSING
+        join:
+          joinCondition: |-
+            FROM {{ ref('DBSHIFT', 'STG_CUSTOM_FORM_PROCESSING') }} SL
+            WHERE NULLIF(XMLGET(PARSE_XML(SL."XML_DATA"), '/Control/@Id'):"$",'') IS NOT NULL
+              AND NULLIF(XMLGET(PARSE_XML(SL."XML_DATA"), '/Control/@FldName'):"$",'') IS NOT NULL
+        name: STG_CUSTOM_FORM_MAP_FINAL
+        noLinkRefs: []
+  name: STG_CUSTOM_FORM_MAP_FINAL
+  overrideSQL: false
+  schema: DBSHIFT
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

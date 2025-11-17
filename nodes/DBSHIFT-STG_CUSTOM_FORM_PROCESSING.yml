@@ -1,0 +1,117 @@
+fileVersion: 1
+id: 5bec560d-dc4f-4a31-8892-b8903b17e6ba
+name: STG_CUSTOM_FORM_PROCESSING
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: DBSHIFT
+  deployEnabled: true
+  description: Stage node for processing XML form data from custom form staging table
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0678e448-b4a2-4ad4-b8be-5967e12a71c9
+          stepCounter: 5bec560d-dc4f-4a31-8892-b8903b17e6ba
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UNIQCUSTOMFORMMAP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0678e448-b4a2-4ad4-b8be-5967e12a71c9
+                stepCounter: 5bec560d-dc4f-4a31-8892-b8903b17e6ba
+            transform: SL."UNIQCUSTOMFORMMAP"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2a604026-5b82-4e0a-9812-f7ead98a766d
+          stepCounter: 5bec560d-dc4f-4a31-8892-b8903b17e6ba
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: FORM_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2a604026-5b82-4e0a-9812-f7ead98a766d
+                stepCounter: 5bec560d-dc4f-4a31-8892-b8903b17e6ba
+            transform: XMLGET(SL."FORMDATA", 'Transfer/TransferSet/ScrnSets/ScrnSet/@ScrnDesc')::VARCHAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f5bd4f4b-892c-4c22-a5b7-f8a2e45efac1
+          stepCounter: 5bec560d-dc4f-4a31-8892-b8903b17e6ba
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PAGE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f5bd4f4b-892c-4c22-a5b7-f8a2e45efac1
+                stepCounter: 5bec560d-dc4f-4a31-8892-b8903b17e6ba
+            transform: XMLGET(F.VALUE, '../@Id')::VARCHAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d8ddcbf-13a4-4d5d-89fc-d57a99dde8fa
+          stepCounter: 5bec560d-dc4f-4a31-8892-b8903b17e6ba
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PAGE_DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2d8ddcbf-13a4-4d5d-89fc-d57a99dde8fa
+                stepCounter: 5bec560d-dc4f-4a31-8892-b8903b17e6ba
+            transform: XMLGET(F.VALUE, '../@PageDesc')::VARCHAR
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48de5241-b2cd-4b94-b11c-a418a4bb8e4a
+          stepCounter: 5bec560d-dc4f-4a31-8892-b8903b17e6ba
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: XML_DATA
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 48de5241-b2cd-4b94-b11c-a418a4bb8e4a
+                stepCounter: 5bec560d-dc4f-4a31-8892-b8903b17e6ba
+            transform: F.VALUE::VARCHAR
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          SL: aadcb095-9440-43b5-9c04-9dde0d2749a4
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: DW_CLIENT_BENCHMARKING_CUSTOM_FORM_STAGING_EPIC
+        join:
+          joinCondition: |-
+            FROM {{ ref('DBSHIFT', 'DW_CLIENT_BENCHMARKING_CUSTOM_FORM_STAGING_EPIC') }} SL,
+            LATERAL FLATTEN(input => XMLGET(SL."FORMDATA", 'Transfer/TransferSet/ScrnSets/ScrnSet/Pages/Page/DataEntry/Control', 0), outer => true) F
+            WHERE NULLIF(XMLGET(SL."FORMDATA", 'Transfer/TransferSet/ScrnSets/ScrnSet/@ScrnDesc'):"$",'') IS NOT NULL
+              AND F.VALUE IS NOT NULL
+        name: STG_CUSTOM_FORM_PROCESSING
+        noLinkRefs: []
+  name: STG_CUSTOM_FORM_PROCESSING
+  overrideSQL: false
+  schema: DBSHIFT
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
