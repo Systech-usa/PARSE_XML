@@ -1,0 +1,1422 @@
+fileVersion: 1
+id: 576426a8-a83d-4c3e-862d-036136e0539b
+name: DW_CLIENT_BENCHMARKING_CLIENT_STAGING
+operation:
+  database: Alliant_DW_Stage
+  deployEnabled: true
+  description: ""
+  locationName: DBSHIFT
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b0ef67c-d903-469d-8fcd-bd6d0c75c602
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_SOURCE_SYSTEM_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1a2608c-9c70-449e-ba23-95cf5311e57c
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_CLIENT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 326757b0-8488-444a-a43b-312154580cae
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_CLIENT_MASTER_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b13c6e9a-7a55-4927-a9a7-58b6680a158b
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_POLICY_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4eb7c94b-4861-469b-bc3b-5136d8f20387
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_STRUCTURE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c12f97fa-42e3-4d7a-8b83-a75225c9cc9d
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_COMPANY_ID_ISSUING
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b814b7e9-e366-4d76-880c-03d6d02a7b82
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_COMPANY_ID_BILLING
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 423b497a-9694-4d87-99f7-66dd67a052e4
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_DATE_ID_EFFECTIVE_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7e732d0c-e160-4ca0-9114-c10fc0f8c37d
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_DATE_ID_EXPIRATION_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d197607-b24d-4952-b91c-8b83533ec14e
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: POLICY_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b5b5c91-62d4-4f01-b21a-6419d8560156
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: POLICY_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c0bb1ac0-c202-4752-be16-a1ac50361668
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: POLICY_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e8a0113f-a36b-4e6f-9694-82a89360ccf7
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: POLICY_TYPE_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f82df97-76b1-412e-abf1-ef17d5440d9b
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: LINE_STATUS_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d33451e-64d8-4f81-a791-03713f3607f2
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: LINE_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a7ab135-26a1-4560-af60-03820295cd45
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: LINE_TYPE_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f371d933-cbe2-44fe-9c3f-c662867f0f67
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: POLICY_EFFECTIVE_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 93dd6280-5a33-4f93-b6c8-54c330fceb79
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: POLICY_EXPIRATION_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d3645e54-46c5-455a-ab36-d245c3631f49
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: BILLED_COMMISSION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32a0c242-4f11-4f16-ad07-062e086f4a43
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: BILLED_PREMIUM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eb994809-58d3-4e44-ab9a-115f013d2fa1
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: EMPLOYEE_COUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c76ed6a4-6597-40c2-95f0-b99f8d55d21d
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: EMPLOYEE_COUNT_CALIFORNIA
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b0683ea-6c0b-4b13-a4c3-e7f2275f0a78
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: EMPLOYEE_COUNT_UNITED_STATES
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3224b11f-561b-4029-9e80-d6216a9a7a13
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: EMPLOYEE_COUNT_GLOBAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d1ab5a7-9fd5-4a6c-941f-d238038622c4
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: EMPLOYEE_DOMESTIC_US_FLAG
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a8c0e29-01f6-4997-a745-f489fcdb3917
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: EMPLOYEE_GLOBAL_FLAG
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d721151-512c-474c-8bb3-47a32d18408a
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: TOTAL_REVENUE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 541f92e4-e0c9-4621-a4b5-5d9c7921c5f8
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: TOTAL_CLIENT_ASSETS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1255e4e-09a8-4228-ae7f-945781a7d65b
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: PRIVATE_OR_PUBLIC
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d2468305-6490-4499-a65c-eb34d28435d6
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: MARKET_CAP
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 77a0bce1-d703-4903-bb93-ff26258edb19
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: PUBLIC_FLOAT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a63d41f0-4660-44e2-b883-7c0130d216f4
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: IPO
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f37e849-c4ad-4f6c-8fc5-c9902bd21e33
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: EFFECTIVE_DATE_FINANCIAL_PACKAGE_PROGRAM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: de944747-0e62-421b-bf2f-a3964fc5a959
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: FIG_CLIENT_TYPE1
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c2358f27-a029-4b6e-b3ae-31a8fc378129
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: FIG_CLIENT_TYPE2
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a960717-b673-455b-b9f1-a1286b9766ee
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: FIG_CLIENT_TYPE3
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b06822c-a29d-4355-83e9-c70e0600a94e
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: AUM_DISCRETIONARY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e86a2417-66a9-45e0-8277-3e813904e5d6
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: AUM_NON_DISCRETIONARY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9c0993d0-3d23-45a2-9908-62a2202bb31c
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: PRIMARY_INVESTMENT_STRATEGY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c02c1f93-018e-490e-b7d1-e970b4a49c25
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: INVESTMENT_STRATEGY2
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 825a0a38-5100-4b24-9b88-1510d210da14
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: INVESTMENT_STRATEGY3
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 63f6ca0b-5353-488b-a437-0f46d1ef508f
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: INVESTMENT_STRATEGY4
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e8075727-b500-4fcd-a14a-71861962ccf7
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: INVESTMENT_STRATEGY5
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 56c8022a-0ac9-4a70-8b1b-fd3818e38526
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: INVESTMENT_STRATEGY6
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 676b7762-28c0-48e0-ac54-4638d9765293
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: INVESTMENT_STRATEGY7
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3c73449-31e3-4d6d-92d5-992ca3658514
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: INVESTMENT_STRATEGY_NOTES
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5122b512-68b2-4d51-bb38-662580b080d0
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: ASSETS_UNDER_MANAGEMENT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 765239e2-abf9-42b7-a3f1-d002f23b207d
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: FUND_STRUCTURE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f269a6d-2396-419b-a3d8-18e00199e4ce
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: DEVELOPERS_FLAG
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a63d1a33-286a-4b95-a4f6-8c4d2cc73516
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SINGLE_FAM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b577e1aa-ec77-440c-83b5-773dfc540938
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: NUMBER_OF_REPS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d8a84518-ff35-430c-8979-99c0179a61e7
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: ASSETS_UNDER_ADVISEMENT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60ac6660-3103-4f93-ad20-c2668383a30c
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: BANK_ASSETS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32624a72-74d4-4f04-893f-c57be6a1e3ee
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: NON_BANK_LENDERS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 77885b5d-e544-4632-bd97-6a4a159ac841
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: MORTGAGE_ORIGINATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0fbb1a54-7261-4560-af0b-c9e5086d7950
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: MORTGAGE_REIT_ASSETS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7987823e-6366-4e59-b1d5-b6d39ab3c938
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: AMPS_MERGER_AND_ACQUISITIONS1
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 09d056ae-a23d-472d-bfce-4c4f034509e5
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: AMPS_MERGER_AND_ACQUISITIONS2
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1904a0e-a612-4217-a162-856149f874ab
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: AMPS_MERGER_AND_ACQUISITIONS3
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97f39459-7fbd-40d3-9f5b-59d0f4d38c53
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: NUMBER_OF_PROFESSIONALS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d758b762-df29-479c-b174-a6907409f87c
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: PRIVACY_REPORTS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c23d38ec-5573-41bb-9642-1e9a7e0a4f5f
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: ERISA_PLAN_ASSETS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a0f4b88d-4e9f-4315-9c59-b5ebc525f0a3
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: PRIVATE_EQUITY_SPONSOR_FLAG
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 569d3110-e55d-4f6c-8515-32fa4c0d02b7
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: EMPLOYER_SECURITIES_IN_PLAN_ASSETS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cce2a201-90c7-43ca-9387-f836423307fc
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: ESOP_FLAG
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 93457193-4a17-4852-875f-2abf12b69490
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_CLIENT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b6a3809-5452-4467-b50a-f06b6b553641
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_POLICY_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b1d4013-11b3-4638-b789-5cc8e6c43431
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_POLICY_LINE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f2f7fd1-65f6-49a7-8096-7ed975ed30fd
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_POLICY_TYPE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f32c49c7-59d4-47fd-bbd7-ca072d73318f
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_CUSTOM_FORM_SCREEN_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d166e409-5a58-45e0-8434-f81d85040d6e
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_LINE_TYPE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6363c1a3-2c4f-4d2b-b5d1-6c2e0b519098
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_ISSUING_COMPANY_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f90632d4-1a61-455b-b9f1-a1e1273574c3
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_BILLING_COMPANY_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 76f9edae-e362-45e7-9d29-c70f803f2601
+          stepCounter: 576426a8-a83d-4c3e-862d-036136e0539b
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_ORIGINAL_POLICY_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: dw_client_benchmarking_client_staging
+  schema: dbo
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
