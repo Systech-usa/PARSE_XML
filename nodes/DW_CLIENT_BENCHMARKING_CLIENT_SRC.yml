@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 5937105d-2565-4424-91c2-c7c4c9b3a3ab
+name: DW_CLIENT_BENCHMARKING_CLIENT_SRC
+operation:
+  database: Alliant_DW
+  deployEnabled: true
+  description: ""
+  locationName: DW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 63e00cf7-9a1d-4876-b633-875c742c3855
+          stepCounter: 5937105d-2565-4424-91c2-c7c4c9b3a3ab
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: DW_CLIENT_BENCHMARKING_CLIENT_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e89a6967-df42-430c-99d8-94f38755030e
+          stepCounter: 5937105d-2565-4424-91c2-c7c4c9b3a3ab
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_CLIENT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b139e7eb-07a8-444f-b649-43c22d7335d8
+          stepCounter: 5937105d-2565-4424-91c2-c7c4c9b3a3ab
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: SOURCE_SYSTEM_POLICY_LINE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1a90c00-0e54-46ab-8809-7d0e80a58338
+          stepCounter: 5937105d-2565-4424-91c2-c7c4c9b3a3ab
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        name: DW_DATE_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: dw_client_benchmarking_client
+  schema: dbo
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
