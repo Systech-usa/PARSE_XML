@@ -1,0 +1,263 @@
+fileVersion: 1
+id: 593b482a-28e4-4a4a-874e-5c464c2d3340
+name: DW_CLIENT_BENCHMARKING_CLIENT_POLICY_STAGING_EPIC
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: DBSHIFT
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f2f7902-6028-4e8c-843e-c68e1c66f917
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_CLIENT_BENCHMARKING_CLIENT_POLICY_STAGING_EPIC_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 93f7c4e5-950f-4886-90e8-0b615456f966
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: UNIQENTITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d1c7849-5f21-4d37-af6a-1d575510667f
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: UNIQPOLICY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d19483c6-6b22-4848-8e68-0fa872b7a9de
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: UNIQLINE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3b9f394-08a8-4444-9343-690a996c5614
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: POLICYNUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7674697-b67f-442d-888e-c35064e9a4f4
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: CDPOLICYLINETYPECODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b57774d6-cd8c-4f1e-879e-c8e42f7c0065
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: SCREENDATA
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d241763a-23a5-4929-a1d2-0545f1b13dd9
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: UNIQCUSTOMFORMSCREEN
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e890a6ea-f0ed-4d94-9844-482453e96195
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: UNIQCUSTOMFORMMAP
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fba90e29-ac2e-4074-a0bd-722a86891040
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        name: LINETYPEUNIQCUSTOMFORMMAP
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a5937a0-0010-449e-b7e3-05b1c97a5585
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_SOURCE_SYSTEM_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b6a378d-a4e9-4676-9c4c-3e6605021290
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_CLIENT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c06518a4-0985-45cc-a590-b3e34360e572
+          stepCounter: 593b482a-28e4-4a4a-874e-5c464c2d3340
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: DW_STRUCTURE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: DW_CLIENT_BENCHMARKING_CLIENT_POLICY_STAGING_EPIC
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
