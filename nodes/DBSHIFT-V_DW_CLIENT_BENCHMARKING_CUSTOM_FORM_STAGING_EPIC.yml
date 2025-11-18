@@ -9,7 +9,7 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: TARGET
+  locationName: DBSHIFT
   materializationType: view
   metadata:
     appliedNodeTests: []
@@ -65,11 +65,11 @@ operation:
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: SRC
+          - locationName: DBSHIFT
             nodeName: DW_CLIENT_BENCHMARKING_CUSTOM_FORM_STAGING_EPIC
         join:
           joinCondition: |-
-            FROM {{ ref('SRC', 'DW_CLIENT_BENCHMARKING_CUSTOM_FORM_STAGING_EPIC') }} "DW_CLIENT_BENCHMARKING_CUSTOM_FORM_STAGING_EPIC", 
+            FROM {{ ref('DBSHIFT', 'DW_CLIENT_BENCHMARKING_CUSTOM_FORM_STAGING_EPIC') }} "DW_CLIENT_BENCHMARKING_CUSTOM_FORM_STAGING_EPIC", 
             LATERAL FLATTEN(input => get(xmlget(xmlget(xmlget(xmlget(xmlget(xmlget(DW_CLIENT_BENCHMARKING_CUSTOM_FORM_STAGING_EPIC.FORMDATA, 'TransferSets'), 'ScreenSets'), 'ScreenSet'), 'Pages'), 'Page'), 'DataEntry'), '$')) "Transfer_TransferSets_ScreenSets_ScreenSet_Pages_Page_DataEntry_Control"
         name: V_DW_CLIENT_BENCHMARKING_CUSTOM_FORM_STAGING_EPIC
         noLinkRefs: []
