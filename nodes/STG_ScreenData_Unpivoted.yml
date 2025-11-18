@@ -1,0 +1,196 @@
+fileVersion: 1
+id: 610a71f0-4c7b-4d40-b6f2-1a4c9c1044de
+name: STG_ScreenData_Unpivoted
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: Alliant_DW
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f2b9631-fbd2-4217-91a5-816d3f2fc674
+          stepCounter: 610a71f0-4c7b-4d40-b6f2-1a4c9c1044de
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: dw_client_benchmarking_client_policy_staging_epic_id
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0f2b9631-fbd2-4217-91a5-816d3f2fc674
+                stepCounter: 54955b41-2a07-427f-9419-796575193f41
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32560e0a-0c2b-450f-a99f-07440b8bb71c
+          stepCounter: 610a71f0-4c7b-4d40-b6f2-1a4c9c1044de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UniqEntity
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 32560e0a-0c2b-450f-a99f-07440b8bb71c
+                stepCounter: 54955b41-2a07-427f-9419-796575193f41
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0a9b8f2c-e3a1-427d-94d3-0669176311d4
+          stepCounter: 610a71f0-4c7b-4d40-b6f2-1a4c9c1044de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UniqPolicy
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0a9b8f2c-e3a1-427d-94d3-0669176311d4
+                stepCounter: 54955b41-2a07-427f-9419-796575193f41
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f74bb9f-7ac0-4e33-979a-e8d022b3b72c
+          stepCounter: 610a71f0-4c7b-4d40-b6f2-1a4c9c1044de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UniqLine
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2f74bb9f-7ac0-4e33-979a-e8d022b3b72c
+                stepCounter: 54955b41-2a07-427f-9419-796575193f41
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: df514d3f-9173-4556-9a5c-755d9b552309
+          stepCounter: 610a71f0-4c7b-4d40-b6f2-1a4c9c1044de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PolicyNumber
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: df514d3f-9173-4556-9a5c-755d9b552309
+                stepCounter: 54955b41-2a07-427f-9419-796575193f41
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1a9c370-d7d6-4e58-8acb-de5d4b008620
+          stepCounter: 610a71f0-4c7b-4d40-b6f2-1a4c9c1044de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CdPolicyLineTypeCode
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d1a9c370-d7d6-4e58-8acb-de5d4b008620
+                stepCounter: 54955b41-2a07-427f-9419-796575193f41
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a4d41e7d-f421-4f36-8dd7-59a65cf57d07
+          stepCounter: 610a71f0-4c7b-4d40-b6f2-1a4c9c1044de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UniqCustomFormScreen
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a4d41e7d-f421-4f36-8dd7-59a65cf57d07
+                stepCounter: 54955b41-2a07-427f-9419-796575193f41
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e325df2-43bb-4034-8c7e-07a51d8d356c
+          stepCounter: 610a71f0-4c7b-4d40-b6f2-1a4c9c1044de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UniqCustomFormMap
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e325df2-43bb-4034-8c7e-07a51d8d356c
+                stepCounter: 54955b41-2a07-427f-9419-796575193f41
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e89a6962-d48e-4a6c-94eb-bdf776092120
+          stepCounter: 610a71f0-4c7b-4d40-b6f2-1a4c9c1044de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LineTypeUniqCustomFormMap
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e89a6962-d48e-4a6c-94eb-bdf776092120
+                stepCounter: 54955b41-2a07-427f-9419-796575193f41
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d9a2c3a-1d5e-4e89-a2e6-c112b3a4d5e6
+          stepCounter: 610a71f0-4c7b-4d40-b6f2-1a4c9c1044de
+        config: {}
+        dataType: VARCHAR(255)
+        description: ""
+        name: field_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a206b0d9-7ed9-4670-af96-512c01990c88
+                stepCounter: 54955b41-2a07-427f-9419-796575193f41
+            transform: XMLGET(X.VALUE, '@Name'):"$"::VARCHAR(255)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9f0a1b2c-3d4e-4f5a-6b7c-8d9e0f1a2b3c
+          stepCounter: 610a71f0-4c7b-4d40-b6f2-1a4c9c1044de
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: field_data
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a206b0d9-7ed9-4670-af96-512c01990c88
+                stepCounter: 54955b41-2a07-427f-9419-796575193f41
+            transform: NULLIF(TRIM(XMLGET(X.VALUE, '@Data'):"$"::VARCHAR), '')
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          dw_client_benchmarking_client_policy_staging_epic: b
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: dw_client_benchmarking_client_policy_staging_epic
+        join:
+          joinCondition: FROM {{ ref('DBSHIFT', 'dw_client_benchmarking_client_policy_staging_epic') }}
+            AS b, LATERAL FLATTEN(INPUT => PARSE_XML(b.ScreenData), PATH => 'Data/NonScheduled/Field')
+            X WHERE b.CdPolicyLineTypeCode = '1CLI'
+        name: STG_ScreenData_Unpivoted
+        noLinkRefs: []
+  name: STG_ScreenData_Unpivoted
+  overrideSQL: false
+  schema: STAGING
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

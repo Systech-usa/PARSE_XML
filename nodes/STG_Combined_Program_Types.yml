@@ -1,0 +1,192 @@
+fileVersion: 1
+id: 5f2a7e11-3d5e-4e89-a2e6-c112b3a4d5e6
+name: STG_Combined_Program_Types
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: Alliant_DW
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b8d2c3e-4d5e-4f6a-b7c8-d9e0f1a2b3c4
+          stepCounter: 5f2a7e11-3d5e-4e89-a2e6-c112b3a4d5e6
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: UniqLine
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c9e3d4f-5e6f-407a-b8d9-e0f1a2b3c4d5
+          stepCounter: 5f2a7e11-3d5e-4e89-a2e6-c112b3a4d5e6
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: program_type_key
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3da04e50-6f70-418a-b9ea-f1a2b3c4d5e6
+          stepCounter: 5f2a7e11-3d5e-4e89-a2e6-c112b3a4d5e6
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: primary_limit
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4eb15f61-7081-429b-ca0b-02b3c4d5e6f7
+          stepCounter: 5f2a7e11-3d5e-4e89-a2e6-c112b3a4d5e6
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: primary_premium
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5fc26072-8192-43ac-db1c-13c4d5e6f708
+          stepCounter: 5f2a7e11-3d5e-4e89-a2e6-c112b3a4d5e6
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: primary_sir_retention
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60d37183-92a3-44bd-ec2d-24d5e6f70819
+          stepCounter: 5f2a7e11-3d5e-4e89-a2e6-c112b3a4d5e6
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: primary_ico
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71e48294-a3b4-45ce-fd3e-35e6f708192a
+          stepCounter: 5f2a7e11-3d5e-4e89-a2e6-c112b3a4d5e6
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: aggregate_limit
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 82f593a5-b4c5-46df-0e4f-46f708192a3b
+          stepCounter: 5f2a7e11-3d5e-4e89-a2e6-c112b3a4d5e6
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: aggregate_premium
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9306a4b6-c5d6-47e0-1f50-5708192a3b4c
+          stepCounter: 5f2a7e11-3d5e-4e89-a2e6-c112b3a4d5e6
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: aggregate_sir_retention
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a417b5c7-d6e7-48f1-2061-68192a3b4c5d
+          stepCounter: 5f2a7e11-3d5e-4e89-a2e6-c112b3a4d5e6
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: aggregate_ico
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: STG_financial_professional_package
+          - locationName: DBSHIFT
+            nodeName: STG_management_liability_package
+          - locationName: DBSHIFT
+            nodeName: STG_professional_liability_package
+          - locationName: DBSHIFT
+            nodeName: STG_stand_alone_do
+          - locationName: DBSHIFT
+            nodeName: STG_stand_alone_epl
+          - locationName: DBSHIFT
+            nodeName: STG_stand_alone_crime
+          - locationName: DBSHIFT
+            nodeName: STG_stand_alone_fiduciary
+          - locationName: DBSHIFT
+            nodeName: STG_stand_alone_cyber
+          - locationName: DBSHIFT
+            nodeName: STG_stand_alone_prof_Liability_eo
+          - locationName: DBSHIFT
+            nodeName: STG_reps_warranties
+          - locationName: DBSHIFT
+            nodeName: STG_side_a_and_do
+        join:
+          joinCondition: |
+            FROM (
+              SELECT * FROM {{ ref('DBSHIFT','STG_financial_professional_package') }}
+              UNION ALL SELECT * FROM {{ ref('DBSHIFT','STG_management_liability_package') }}
+              UNION ALL SELECT * FROM {{ ref('DBSHIFT','STG_professional_liability_package') }}
+              UNION ALL SELECT * FROM {{ ref('DBSHIFT','STG_stand_alone_do') }}
+              UNION ALL SELECT * FROM {{ ref('DBSHIFT','STG_stand_alone_epl') }}
+              UNION ALL SELECT * FROM {{ ref('DBSHIFT','STG_stand_alone_crime') }}
+              UNION ALL SELECT * FROM {{ ref('DBSHIFT','STG_stand_alone_fiduciary') }}
+              UNION ALL SELECT * FROM {{ ref('DBSHIFT','STG_stand_alone_cyber') }}
+              UNION ALL SELECT * FROM {{ ref('DBSHIFT','STG_stand_alone_prof_Liability_eo') }}
+              UNION ALL SELECT * FROM {{ ref('DBSHIFT','STG_reps_warranties') }}
+              UNION ALL SELECT * FROM {{ ref('DBSHIFT','STG_side_a_and_do') }}
+            ) u
+        name: STG_Combined_Program_Types
+        noLinkRefs: []
+  name: STG_Combined_Program_Types
+  overrideSQL: false
+  schema: STAGING
+  sqlType: View
+  type: sql
+  version: 1
+type: Node
