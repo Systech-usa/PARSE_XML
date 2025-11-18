@@ -1,0 +1,153 @@
+fileVersion: 1
+id: 5743b351-4089-4b68-80f4-5f1712a32c21
+name: DBSHIFT_PSTG_NODE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: |-
+      MERGE INTO Alliant_DW_Stage.dbo.dw_client_benchmarking_client_program_staging AS TGT
+      USING (
+          SELECT
+              stg_src.dw_client_benchmarking_client_program_staging_id, -- NOTE: Assumed Primary Key for the join
+              cbc.dw_client_benchmarking_client_id,
+              pt.client_benchmarking_program_type_id,
+              cp.dw_company_id AS dw_company_id_primary,
+              ca.dw_company_id AS dw_company_id_aggregate,
+              stg_src.source_system_primary_limit,
+              stg_src.source_system_primary_premium,
+              stg_src.source_system_primary_sir_retention,
+              stg_src.source_system_aggregate_limit,
+              stg_src.source_system_aggregate_premium,
+              stg_src.source_system_aggregate_sir_retention
+          FROM Alliant_DW_Stage.dbo.dw_client_benchmarking_client_program_staging stg_src
+          LEFT JOIN Alliant_DW.dbo.dw_client_benchmarking_client cbc ON stg_src.source_system_policy_line_id = cbc.source_system_policy_line_id
+          LEFT JOIN Alliant_DW.ref.client_benchmarking_program_type pt ON stg_src.program_type_key = pt.program_type_key
+          LEFT JOIN Alliant_DW.dbo.dw_company cp ON stg_src.primary_company_lookup_code = cp.company_lookupcode
+          LEFT JOIN Alliant_DW.dbo.dw_company ca ON stg_src.aggregate_company_lookup_code = ca.company_lookupcode
+      ) AS SRC
+      ON TGT.dw_client_benchmarking_client_program_staging_id = SRC.dw_client_benchmarking_client_program_staging_id
+      WHEN MATCHED THEN
+      UPDATE SET
+          TGT.dw_client_benchmarking_client_id = IFNULL(SRC.dw_client_benchmarking_client_id, -1),
+          TGT.client_benchmarking_program_type_id = IFNULL(SRC.client_benchmarking_program_type_id, -1),
+          TGT.dw_company_id_primary = IFNULL(SRC.dw_company_id_primary, -1),
+          TGT.dw_company_id_aggregate = IFNULL(SRC.dw_company_id_aggregate, -1),
+          TGT.primary_limit = NULLIF(TRY_CAST(REPLACE(REPLACE(SRC.source_system_primary_limit, '$', ''), ',', '') AS NUMERIC(38,0)),0),
+          TGT.primary_premium = NULLIF(TRY_CAST(REPLACE(REPLACE(SRC.source_system_primary_premium, '$', ''), ',', '') AS NUMERIC(38,0)),0),
+          TGT.primary_sir_retention = NULLIF(TRY_CAST(REPLACE(REPLACE(SRC.source_system_primary_sir_retention, '$', ''), ',', '') AS NUMERIC(38,0)),0),
+          TGT.aggregate_limit = NULLIF(TRY_CAST(REPLACE(REPLACE(SRC.source_system_aggregate_limit, '$', ''), ',', '') AS NUMERIC(38,0)),0),
+          TGT.aggregate_premium = NULLIF(TRY_CAST(REPLACE(REPLACE(SRC.source_system_aggregate_premium, '$', ''), ',', '') AS NUMERIC(38,0)),0),
+          TGT.aggregate_sir_retention = NULLIF(TRY_CAST(REPLACE(REPLACE(SRC.source_system_aggregate_sir_retention, '$', ''), ',', '') AS NUMERIC(38,0)),0);
+    testsEnabled: true
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: UPDATE-only conversion of spdw_dw_client_benchmarking_client_program_staging_update
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1a0a526-a07c-474c-ac9d-a417088b7762
+          stepCounter: 5743b351-4089-4b68-80f4-5f1712a32c21
+        config: {}
+        dataType: VARCHAR(32)
+        description: ""
+        name: DBSHIFT_PSTG_NODE_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: MD5(1)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b57e7c85-6453-4852-87f5-2b4f910ed661
+          stepCounter: 5743b351-4089-4b68-80f4-5f1712a32c21
+        config: {}
+        dataType: INT
+        description: ""
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: "1"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cce26f4f-4223-455b-b9f1-ca0ef51f048d
+          stepCounter: 5743b351-4089-4b68-80f4-5f1712a32c21
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: "TRUE"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3a82647-798a-4934-a3f1-d003445cd7d4
+          stepCounter: 5743b351-4089-4b68-80f4-5f1712a32c21
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: SYSTEM_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5b14c33-8557-4b7b-8302-3f6e1f0a0d9b
+          stepCounter: 5743b351-4089-4b68-80f4-5f1712a32c21
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: SYSTEM_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: CAST('9999-12-31 23:59:59.999' AS TIMESTAMP)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d8b31a3-4a1d-40d0-9f5b-1188a1b5c494
+          stepCounter: 5743b351-4089-4b68-80f4-5f1712a32c21
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a634351a-7b0d-49d8-99e5-9477e383918a
+          stepCounter: 5743b351-4089-4b68-80f4-5f1712a32c21
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping: []
+  name: DBSHIFT_PSTG_NODE
+  overrideSQL: false
+  schema: ""
+  sqlType: persistentStage
+  type: sql
+  version: 1
+type: Node
