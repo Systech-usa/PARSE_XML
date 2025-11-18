@@ -143,7 +143,13 @@ operation:
         transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
     cteString: ""
     enabledColumnTestIDs: []
-    sourceMapping: []
+    sourceMapping:
+      - aliases: {}
+        dependencies: []
+        join:
+          joinCondition: ""
+        name: DBSHIFT_PSTG_NODE
+        noLinkRefs: []
   name: DBSHIFT_PSTG_NODE
   overrideSQL: false
   schema: ""
