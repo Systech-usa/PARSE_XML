@@ -1,0 +1,594 @@
+fileVersion: 1
+id: c3796b6c-a607-431c-ae0f-0e3a9593c778
+name: DW_CLIENT_BENCHMARKING_CLIENT_PROGRAM
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ALLIANT_DW
+  deployEnabled: true
+  description: Client benchmarking client program dimension with new records only
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b511cd1f-a97d-4003-97eb-4336a685b704
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isBusinessKey: false
+        isSurrogateKey: true
+        name: DIM_DW_CLIENT_BENCHMARKING_CLIENT_PROGRAM_STAGING_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a4eb4f8b-fb87-410b-95b3-3bc1d2aa283f
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: DW_SOURCE_SYSTEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a4eb4f8b-fb87-410b-95b3-3bc1d2aa283f
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.DW_SOURCE_SYSTEM_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cae7a893-3352-4ddb-b6a7-8bc220828c59
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: DW_CLIENT_BENCHMARKING_CLIENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cae7a893-3352-4ddb-b6a7-8bc220828c59
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.DW_CLIENT_BENCHMARKING_CLIENT_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c80a2b3-8b40-4117-80e6-7fca54fde90a
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: DW_CLIENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8c80a2b3-8b40-4117-80e6-7fca54fde90a
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.DW_CLIENT_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c3634d43-800c-4954-8d8f-e40c39ef9459
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: DW_STRUCTURE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c3634d43-800c-4954-8d8f-e40c39ef9459
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.DW_STRUCTURE_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b4ee382e-250e-4e0b-9b29-96d619715736
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: DW_COMPANY_ID_PRIMARY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b4ee382e-250e-4e0b-9b29-96d619715736
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.DW_COMPANY_ID_PRIMARY
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8903157f-283b-4fd6-a3df-c22e91a8d546
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: DW_COMPANY_ID_AGGREGATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8903157f-283b-4fd6-a3df-c22e91a8d546
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.DW_COMPANY_ID_AGGREGATE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ddbad90c-2861-433e-84a4-6cd24fca3a09
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: CLIENT_BENCHMARKING_PROGRAM_TYPE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ddbad90c-2861-433e-84a4-6cd24fca3a09
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.CLIENT_BENCHMARKING_PROGRAM_TYPE_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 158d8041-1fdf-4c74-80ec-072fe02c3593
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        isBusinessKey: true
+        name: PROGRAM_TYPE_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 158d8041-1fdf-4c74-80ec-072fe02c3593
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.PROGRAM_TYPE_KEY
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 338e577a-f5fc-4c9a-83ab-0c3f96b9e91f
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: PRIMARY_LIMIT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 338e577a-f5fc-4c9a-83ab-0c3f96b9e91f
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.PRIMARY_LIMIT
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8d6b9f0-de95-4e85-aa24-094b829d078b
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: PRIMARY_PREMIUM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f8d6b9f0-de95-4e85-aa24-094b829d078b
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.PRIMARY_PREMIUM
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cea76924-f429-4109-b596-162e9365bfa5
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: PRIMARY_SIR_RETENTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cea76924-f429-4109-b596-162e9365bfa5
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.PRIMARY_SIR_RETENTION
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a8fd211-cc96-46cf-9877-84c9a19e8c36
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        isBusinessKey: false
+        name: PRIMARY_COMPANY_LOOKUP_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1a8fd211-cc96-46cf-9877-84c9a19e8c36
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.PRIMARY_COMPANY_LOOKUP_CODE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16572ff4-2689-4944-976b-1589a0e9f742
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: AGGREGATE_LIMIT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 16572ff4-2689-4944-976b-1589a0e9f742
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.AGGREGATE_LIMIT
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79879e20-6eaa-4bdb-b63e-cf008fc94049
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: AGGREGATE_PREMIUM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 79879e20-6eaa-4bdb-b63e-cf008fc94049
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.AGGREGATE_PREMIUM
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0f0356c-bf7f-4a2f-bff3-f2084ffb5710
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: AGGREGATE_SIR_RETENTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d0f0356c-bf7f-4a2f-bff3-f2084ffb5710
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.AGGREGATE_SIR_RETENTION
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d2ff28c-b7fa-4a74-a162-6929533f854b
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        isBusinessKey: false
+        name: AGGREGATE_COMPANY_LOOKUP_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3d2ff28c-b7fa-4a74-a162-6929533f854b
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.AGGREGATE_COMPANY_LOOKUP_CODE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cdb3a9ef-121e-411f-a89b-bcf3445691fb
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: SOURCE_SYSTEM_PRIMARY_LIMIT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cdb3a9ef-121e-411f-a89b-bcf3445691fb
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.SOURCE_SYSTEM_PRIMARY_LIMIT
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5f268971-a1b6-4c9f-94fc-8d5b4bf0f7af
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: SOURCE_SYSTEM_PRIMARY_PREMIUM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5f268971-a1b6-4c9f-94fc-8d5b4bf0f7af
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.SOURCE_SYSTEM_PRIMARY_PREMIUM
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d6b7e0d-15ed-4373-a95d-52f8e543defa
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: SOURCE_SYSTEM_PRIMARY_SIR_RETENTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9d6b7e0d-15ed-4373-a95d-52f8e543defa
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.SOURCE_SYSTEM_PRIMARY_SIR_RETENTION
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 861189da-edaa-4211-bd51-e9cfb8948e2b
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        isBusinessKey: false
+        name: SOURCE_SYSTEM_AGGREGATE_LIMIT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 861189da-edaa-4211-bd51-e9cfb8948e2b
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.SOURCE_SYSTEM_AGGREGATE_LIMIT
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 33e1e79b-e770-4b31-8aed-6efc70318092
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isBusinessKey: false
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83524dad-d785-40c3-a337-86387c59e17d
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isBusinessKey: false
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 46ecbffd-0ed3-4a3d-a652-2a22d0a7ffd5
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isBusinessKey: false
+        isSystemStartDate: true
+        name: SYSTEM_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 871cc4c0-a9bd-4e7f-82c7-731fe81fffbc
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isBusinessKey: false
+        isSystemEndDate: true
+        name: SYSTEM_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cda539c6-d69c-40e9-bf23-6d77a4b1012c
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isBusinessKey: false
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1c956c11-148f-40ab-8a6e-f6894dd31219
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isBusinessKey: false
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 948a5c7f-0844-46fb-828c-c0e3efc61d35
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: SOURCE_SYSTEM_AGGREGATE_PREMIUM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 948a5c7f-0844-46fb-828c-c0e3efc61d35
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.SOURCE_SYSTEM_AGGREGATE_PREMIUM
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 598c81af-1ffe-4ae3-9276-d243cfe9fd5f
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: SOURCE_SYSTEM_AGGREGATE_SIR_RETENTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 598c81af-1ffe-4ae3-9276-d243cfe9fd5f
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.SOURCE_SYSTEM_AGGREGATE_SIR_RETENTION
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dfa2618b-b8cb-4540-8eeb-152634019405
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SOURCE_SYSTEM_CLIENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dfa2618b-b8cb-4540-8eeb-152634019405
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.SOURCE_SYSTEM_CLIENT_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 75c8a9c6-7f0a-469b-8d36-24cae6e4ad5a
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SOURCE_SYSTEM_POLICY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 75c8a9c6-7f0a-469b-8d36-24cae6e4ad5a
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.SOURCE_SYSTEM_POLICY_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: abb0b85d-7436-42fe-a56a-16d84db888dd
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SOURCE_SYSTEM_POLICY_LINE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: abb0b85d-7436-42fe-a56a-16d84db888dd
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.SOURCE_SYSTEM_POLICY_LINE_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 38c2664d-ace9-4d92-97ba-36aacd022feb
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SOURCE_SYSTEM_CUSTOM_FORM_SCREEN_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 38c2664d-ace9-4d92-97ba-36aacd022feb
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: STG.SOURCE_SYSTEM_CUSTOM_FORM_SCREEN_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 567e1f3d-86ce-41c2-841c-b5e1b5097487
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: DW_DATE_CREATED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 567e1f3d-86ce-41c2-841c-b5e1b5097487
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: CURRENT_TIMESTAMP
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1ff8ba43-9af2-423d-a3d8-473fe44a6576
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DW_CREATE_USER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1ff8ba43-9af2-423d-a3d8-473fe44a6576
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: "'SYSTEM'"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ecd10ccc-2a18-4687-87b8-b8ef08c2819c
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: DW_DATE_UPDATED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ecd10ccc-2a18-4687-87b8-b8ef08c2819c
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: CURRENT_TIMESTAMP
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f985b4a2-e794-4c87-89b6-73565ce888a1
+          stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DW_UPDATE_USER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f985b4a2-e794-4c87-89b6-73565ce888a1
+                stepCounter: c3796b6c-a607-431c-ae0f-0e3a9593c778
+            transform: "'SYSTEM'"
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          D: c3796b6c-a607-431c-ae0f-0e3a9593c778
+          STG: 65665c33-9193-4415-abde-cff35ff44db0
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DBSHIFT
+            nodeName: DW_CLIENT_BENCHMARKING_CLIENT_PROGRAM_STAGING
+        join:
+          joinCondition: |-
+            FROM {{ ref('DBSHIFT', 'DW_CLIENT_BENCHMARKING_CLIENT_PROGRAM_STAGING') }} STG
+            LEFT OUTER JOIN {{ ref_no_link('DBSHIFT', 'DW_CLIENT_BENCHMARKING_CLIENT_PROGRAM') }} d 
+                ON stg.source_system_policy_line_id = d.source_system_policy_line_id
+                AND d.program_type_key = stg.program_type_key
+            WHERE d.dw_client_benchmarking_client_program_id IS NULL
+        name: DW_CLIENT_BENCHMARKING_CLIENT_PROGRAM
+        noLinkRefs:
+          - locationName: DBSHIFT
+            nodeName: DW_CLIENT_BENCHMARKING_CLIENT_PROGRAM
+  name: DW_CLIENT_BENCHMARKING_CLIENT_PROGRAM
+  overrideSQL: false
+  schema: DBO
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node
